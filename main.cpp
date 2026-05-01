@@ -2,32 +2,21 @@
 #include <fstream>
 #include <string>
 #include "letter.h"
-#include <vector>
+#include "main_test.h"
 
 using namespace std;
 
 int main(){
-  
-  string sent = "The quick brown fox jumped over the moon";
-  
-  cout << sent << endl;
-  /*
-  string enc1, enc2, enc3;
-  string dec1, dec2, dec3;
-
+  string sent = readFile("test.txt");
   string password = "key";
-  string extendedPassword;
-  for (string word : sent){
-    extendedPassword += lenManip(word, password);
-  }
 
-  
-  
-  int shift = 13;
-  */
+  cout << sent << endl;
 
+  cout << testC(sent) << endl;
 
-  return 0;
+  cout << testR(sent) << endl;
+
+  cout << testV(sent, password) << endl;
 }
 
 
