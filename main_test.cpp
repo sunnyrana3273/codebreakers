@@ -23,10 +23,13 @@ string readFile(string fileName){
 
 void testC(string sent){
   string enc, dec;
+
+  string noSpace = removeSpace(sent);
   
   cout << "Original phrase: "<< sent << endl;
+  cout << "Truncated phrase: " << noSpace << endl;
 
-  for (char letter : sent){
+  for (char letter : noSpace){
     enc += encodeC(letter);
   }
 
@@ -43,9 +46,12 @@ void testC(string sent){
 void testR(string sent){
   string enc, dec;
 
-  cout << "Original phrase: " << sent << endl;
+  string noSpace = removeSpace(sent);
 
-for (char letter : sent){
+  cout << "Original phrase: " << sent << endl;
+  cout << "Truncated phrase: " << noSpace << endl;
+
+for (char letter : noSpace){
     enc += encodeR(letter);
   }
 
